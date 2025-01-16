@@ -1,0 +1,73 @@
+{
+  "name": "strapi-schemas-to-ts",
+  "version": "2.0.2",
+  "description": "A Strapi plugin that automatically generates Typescript interfaces for Strapi entities and components.",
+  "strapi": {
+    "name": "schemas-to-ts",
+    "displayName": "Schemas to TS",
+    "description": "A Strapi plugin that automatically generates Typescript interfaces for Strapi entities and components.",
+    "kind": "plugin"
+  },
+  "scripts": {
+    "develop": "tsc -p tsconfig.json -w",
+    "build": "tsc -p tsconfig.json",
+    "clean": "rimraf dist/",
+    "rebuild": "yarn clean && yarn build",
+    "fullclean": "rimraf dist/ node_modules/",
+    "fullrebuild": "yarn fullclean && yarn install && yarn build",
+    "npmpublish": "yarn rebuild && yarn publish",
+    "schemas-to-ts": "node ./dist/server/schemas-to-ts/cli.js"
+  },
+  "bin": {
+    "schemas-to-ts": "./dist/server/schemas-to-ts/cli.js"
+  },
+  "dependencies": {
+    "@strapi/helper-plugin": "^4.25.12",
+    "pascal-case": "^3.1.2",
+    "prettier": "^3.4.2",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@strapi/strapi": "^5.7.0",
+    "@strapi/typescript-utils": "^5.7.0",
+    "@types/prettier": "^3.0.0",
+    "@types/yargs": "^17.0.32",
+    "rimraf": "^5.0.5",
+    "typescript": "5.1.6"
+  },
+  "peerDependencies": {},
+  "engines": {
+    "node": ">=14.19.1 <=21.x.x",
+    "npm": ">=6.0.0"
+  },
+  "type": "commonjs",
+  "author": {
+    "name": "khanh00"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/khanh00/strapi-schemas-to-ts#readme",
+  "changelog": "https://github.com/khanh00/strapi-schemas-to-ts/blob/main/CHANGELOG.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khanh00/strapi-schemas-to-ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/khanh00/strapi-schemas-to-ts/issues"
+  },
+  "keywords": [
+    "Strapi",
+    "plugin",
+    "schema",
+    "Typescript",
+    "Converter",
+    "Interfaces"
+  ],
+  "files": [
+    "dist",
+    "strapi-server.js",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "main": "strapi-server.js"
+}
