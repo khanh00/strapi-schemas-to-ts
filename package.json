@@ -1,6 +1,6 @@
 {
   "name": "strapi-schemas-to-ts",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "A Strapi plugin that automatically generates Typescript interfaces for Strapi entities and components.",
   "strapi": {
     "name": "schemas-to-ts",
